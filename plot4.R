@@ -39,6 +39,8 @@ for(i in 1:nrow(Data)) {
 Data[ ,10]<-paste(Data[ ,1],Data[ ,2], sep = " ")
 Whole_Time<-strptime(Data[ ,10], format = "%d/%m/%Y %H:%M:%S")
 
+##Creating the plot
+
 par(mfcol = c(2,2))
 plot(Whole_Time,Global_Active_Power, type = "l", xlab = " ", ylab = "Global Active Power",cex.lab=.75)
 plot(Whole_Time,Sub_metering_1,type = "l",xlab = " ",ylab = "Energy sub metering",cex.lab=.75)
